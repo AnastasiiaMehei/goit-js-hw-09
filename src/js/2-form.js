@@ -7,6 +7,7 @@ const storedFormData = JSON.parse(localStorage.getItem(localStorageKey)) || {
   email: '',
   message: '',
 };
+
 email.value = storedFormData.email;
 message.value = storedFormData.message;
 form.addEventListener('input', handleInput);
