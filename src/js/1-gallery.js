@@ -1,4 +1,6 @@
+// описаний в документації
 import SimpleLightbox from 'simplelightbox';
+// додатковий імпорт стилів
 import 'simplelightbox/dist/simple-lightbox.min.css';
 
 const images = [
@@ -69,8 +71,8 @@ const images = [
 
 const container = document.querySelector('.gallery');
 
-function createGalleryMarkup(items) {
-  return items
+function createGalleryMarkup(images) {
+  return images
     .map(
       ({ preview, original, description }) => `
     <li class="gallery-item">
@@ -88,7 +90,14 @@ function createGalleryMarkup(items) {
 }
 container.insertAdjacentHTML('beforeend', createGalleryMarkup(images));
 
-const gallery = new SimpleLightbox('.gallery a');
-$('.some-element a').simpleLightbox({
-  /* options */
+const lightbox = new SimpleLightbox('.gallery-link', {
+  captionsData: 'alt',
+  captionDelay: 250,
 });
+// $('.some-element a').simpleLightbox({
+//   function() {},
+// });
+// gallery.on('error.simplelightbox', function (e) {});
+
+// const gallery = $('.gallery a').simpleLightbox();
+// gallery.on('show.simplelightbox', function () {});
