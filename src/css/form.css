@@ -26,6 +26,7 @@
   width: 360px;
   height: 40px;
   outline: transparent;
+  padding-left: 18px;
 }
 .input-email:hover {
   border: 1px solid #000;
@@ -41,6 +42,7 @@
   resize: none;
   outline: transparent;
   margin-bottom: 16px;
+  padding: 16px 16px;
 }
 .textarea-message:hover {
   border: 1px solid #000;
