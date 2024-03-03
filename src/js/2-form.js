@@ -18,3 +18,14 @@ function handleInput() {
 function setFormData(object) {
   localStorage.setItem('feedback-form-state', JSON.stringify(object));
 }
+form.addEventListener('submit', handleSubmit);
+function handleSubmit(evt) {
+  evt.preventDefault();
+  if (email.value == '' || message.value == '') {
+    return alert('Please, check input information!!!');
+  }
+  const object = { email: email.value.trim(), message: message.value.trim() };
+  console.log(object);
+  localStorage.removeItem(localStorageKey);
+  form.reset();
+}
