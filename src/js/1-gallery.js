@@ -90,7 +90,7 @@ function createGalleryMarkup(images) {
 }
 container.insertAdjacentHTML('beforeend', createGalleryMarkup(images));
 
-const lightbox = new SimpleLightbox('.gallery-link', {
+const lightbox = new SimpleLightbox('.gallery a', {
   captionsData: 'alt',
   captionDelay: 250,
 });
