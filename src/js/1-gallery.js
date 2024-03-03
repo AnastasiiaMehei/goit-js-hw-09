@@ -94,10 +94,11 @@ const lightbox = new SimpleLightbox('.gallery-link', {
   captionsData: 'alt',
   captionDelay: 250,
 });
+lightbox.on('show.simplelightbox', function () {});
+
 // $('.some-element a').simpleLightbox({
 //   function() {},
 // });
 // gallery.on('error.simplelightbox', function (e) {});
 
 // const gallery = $('.gallery a').simpleLightbox();
-// gallery.on('show.simplelightbox', function () {});

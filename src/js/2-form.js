@@ -1,2 +1,3 @@
 const form = document.querySelector('.feedback-form');
-form.addEventListener('input', hundleInput);
+const inputFields = form.addEventListener('input', hundleInput);
+function handleInput(evt) {}
