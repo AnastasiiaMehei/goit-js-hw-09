@@ -77,7 +77,7 @@ function createGalleryMarkup(images) {
       ({ preview, original, description }) => `
     <li class="gallery-item">
     <a class="gallery-link" href="${original}">
-      <img
+      <img       
         class="gallery-image"
         src="${preview}"
         alt="${description}"
