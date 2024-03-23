@@ -51,7 +51,7 @@
   border: 1px solid #808080;
 }
 .button-submit {
-  border-radius: 8px;
+  /* border-radius: 8px; */
   padding: 8px 16px;
   width: 95px;
   height: 40px;

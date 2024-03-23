@@ -74,16 +74,23 @@ const container = document.querySelector('.gallery');
 function createGalleryMarkup(images) {
   return images
     .map(
-      ({ preview, original, description }) => `
+      ({ webformatURL, largeImageURL, tags }) => `
     <li class="gallery-item">
-    <a class="gallery-link" href="${original}">
+    <a class="gallery-link" href="${largeImageURL}">
       <img       
         class="gallery-image"
-        src="${preview}"
-        alt="${description}"
+        src="${webformatURL}"
+        alt="${tags}"
       />
     </a>
   </li>
+  <li><h3>likes</h3><p>${images.likes}</p><li/>
+  <li><h3>views</h3><p>${images.views}</p><li/>
+  <li><h3>comments</h3><p>${images.comments}</p><li/>  
+  <li><h3>downloads</h3><p>${images.downloads}</p><li/>
+
+
+
 `
     )
     .join('');
